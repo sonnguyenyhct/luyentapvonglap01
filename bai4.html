@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let hienthi = "";
+    for ( let count = 0;count < 10;count++){
+        a += b;
+        b += a;
+        if (a%5 === 0){
+            hienthi += a;
+            break;
+        }
+        if (b%5 === 0){
+            hienthi += b;
+            break;
+        }
+    }
+    document.write(hienthi);
+</script>
+</body>
+</html>

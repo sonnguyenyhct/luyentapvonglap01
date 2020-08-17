@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        let total = "";
+        for (let count = 1; count <= 100; count++){
+            if (count%3 !== 0 && count%5 !==0){
+                total += count + " ";
+            }else if (count%3 === 0 && count%5 !==0){
+                total += " Fizz ";
+            }else if (count%3 !== 0 && count%5 ===0){
+                total += " Buzz ";
+            }else {
+                total += " FizzBuzz ";
+            }
+        }
+        document.write(total);
+    </script>
+</body>
+</html>

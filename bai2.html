@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<p id="hienthinhietdo"></p>
+    <script>
+        let nhietdo = null;
+        while (nhietdo > 100 || nhietdo < 20){
+           nhietdo = parseInt(prompt("Nhiệt độ hiện tại là :"))
+            if (nhietdo > 100){
+                alert("Hãy giảm nhiệt độ xuống");
+            }else if (nhietdo < 20){
+                alert("Hãy tăng nhiệt độ lên");
+            }
+        }
+        document.getElementById("hienthinhietdo").innerHTML = "Nhiệt độ hiện tại là " + nhietdo;
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+    <button type="button" onclick="play()">Play</button>
+    <script>
+        function play() {
+            let sobatdau = parseInt(prompt("Nhập số bắt đầu : "));
+            let soketthuc = parseInt(prompt("Nhập số kết thúc : "));
+            let songaunhien = parseInt((Math.random() * (soketthuc - sobatdau)) + sobatdau);
+            let soduocdoan = parseInt(prompt("Nhập số muốn đoán : "));
+            let count = 1;
+            for (;(soduocdoan !== songaunhien) && count <= 3; count++) {
+                if (soduocdoan > songaunhien) {
+                    alert("Số được chọn lớn hơn đáp án");
+                } else {
+                    alert("Số được chọn bé hơn đáp án");
+                }
+                if (count === 3) {
+                    alert("Bạn đã hết lượt");
+                }else {
+                    soduocdoan = parseInt(prompt("Nhập lại số muốn đoán : "));
+                }
+            }
+            if (soduocdoan === songaunhien) {
+                alert("Chúc mừng bạn");
+            }
+        }
+    </script>
+</body>
+</html>
